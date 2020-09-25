@@ -1,0 +1,15 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.CarouselControls {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    display: none;
+    transform: translateX(-25%);
+
+    @include breakpoint($bp-largest) {
+        display: flex;
+    }
+}

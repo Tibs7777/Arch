@@ -1,0 +1,125 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.ContactDetails {
+    margin: 0 3.2rem 7.2rem 3.2rem;
+    position: relative;
+
+    @include breakpoint($bp-medium) {
+        margin: 0 9.7rem 20rem 9.7rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        margin: 0 16.5rem 20rem 16.5rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &::before {
+        content: "";
+        width: 6.5rem;
+        height: 1px;
+        background-color: var(--color-active-page);
+        display: block;
+        margin-bottom: 6.7rem;
+
+        @include breakpoint($bp-largest) {
+            position: absolute;
+            top: -7.4rem;
+            left: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        @include breakpoint($bp-largest) {
+            margin: 0;
+            margin-right: 3rem;
+            width: 35rem;
+        }
+    }
+
+}
+
+.ContactDetails-card {
+
+    position: relative;
+    max-width: 50rem;
+
+    @include breakpoint(1200px) {
+        width: 40rem;
+        display: inline-block;
+        margin-right: 3rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        width: 35rem;
+    }
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+
+        @include breakpoint(1200px) {
+            margin-bottom: 0;
+        }
+
+    }
+
+
+    &__details {
+        margin-bottom: 1.6rem;
+    }
+
+    &__detail {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__title {
+        line-height: 3.5rem;
+        font-weight: 700;
+        margin-bottom: .8rem;
+        display: block;
+
+
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+
+        @include breakpoint($bp-medium) {
+            position: absolute;
+            right: 0;
+            top: 57%;
+        }
+
+        @include breakpoint(1200px) {
+            position: static;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__button-title {
+        margin-right: 2.4rem;
+        color: var(--color-dark);
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        a,
+        a:visited{
+            color: currentColor;
+            text-decoration: none;
+        }
+    }
+}

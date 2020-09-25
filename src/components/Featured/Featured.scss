@@ -1,0 +1,154 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.Featured {
+    margin: 0 3.2rem;
+    margin-bottom: 13.2rem;
+    
+
+    @include breakpoint($bp-medium) {
+        margin: 0 9.7rem;
+        margin-bottom: 20rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        margin: 0 16.5rem;
+        margin-bottom: 20rem;
+    }
+
+
+    &__heading {
+        margin-bottom: 4.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint($bp-medium) {
+            margin-bottom: 8.5rem;
+        }
+
+        @include breakpoint($bp-largest) {
+            margin-bottom: 6.4rem;
+        }
+
+        .Button {
+            display: none;
+
+            @include breakpoint($bp-medium) {
+                display: flex;
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        row-gap: 2.4rem;
+
+        .Button {
+    
+            @include breakpoint($bp-medium) {
+                display: none;
+            }
+        }
+
+        @include breakpoint($bp-largest) {
+            row-gap: 0;
+            column-gap: 3rem;
+
+            grid-template-columns: repeat(3 1fr);
+        }
+    }
+
+}
+
+.Featured-card {
+    height: 24rem;
+    color: #FFF;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    
+    @include breakpoint($bp-largest) {
+        height: 56rem;
+    }
+
+    &--sol {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/mobile/image-del-sol.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/tablet/image-del-sol.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/desktop/image-del-sol.jpg);
+
+            grid-column: 1 / span 1;
+        }
+    }
+
+    &--228B {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/mobile/image-228b.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/tablet/image-228b.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/desktop/image-228b.jpg);
+
+            grid-column: 2 / span 1;
+        }
+    }
+
+    &--prototype {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/mobile/image-prototype.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/tablet/image-prototype.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../assets/portfolio/desktop/image-prototype.jpg);
+
+            grid-column: 3 / span 1;
+        }
+    }
+
+    &__number {
+        display: none;
+
+
+        @include breakpoint($bp-medium) {
+            display: initial;
+            position: absolute;
+            top: 1.6rem;
+            right: 1.6rem;
+            font-size: 20rem;
+            line-height: 20rem;
+            color: rgba(#fff,.5);
+            font-weight: 700;
+            letter-spacing: -5px;
+
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 2.4rem;
+        left: 2.4rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        display: block;
+        font-size: 1.8rem;
+
+
+    }
+
+    &__link {
+
+    }
+}

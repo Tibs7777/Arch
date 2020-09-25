@@ -1,0 +1,27 @@
+.CarouselButton {
+    width: 8rem;
+    height: 8rem;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--color-background-medium);
+    }
+
+    &--active {
+        background: var(--color-dark);
+        color: #FFF;
+
+        &:hover {
+            background: var(--color-dark);
+        }
+    }
+
+    &:active {
+        background: var(--color-dark);
+        color: #FFF;
+    }
+}

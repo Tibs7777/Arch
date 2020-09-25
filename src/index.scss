@@ -1,0 +1,36 @@
+@import './scss/typography';
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  //COLORS
+  --color-dark: #1B1D23;
+  --color-background-medium: #EEEFF4;
+  --color-toolbar-desktop: #7D828F;
+  --color-active-page: #C8CCD8;
+  --color-error: #DF5656;
+
+  //FONT
+  --font-main: 'Spartan', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}

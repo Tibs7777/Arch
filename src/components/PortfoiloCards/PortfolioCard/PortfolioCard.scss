@@ -1,0 +1,188 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.PortfolioCard {
+
+    width: 100%;
+    min-width: 24rem;
+    height: 24rem;
+    background-color: var(--color-dark);
+    display: block;
+    color: #FFF;
+    position: relative;
+    cursor: pointer;
+
+    @include breakpoint($bp-largest) {
+        height: 56rem;
+    }
+
+    &:hover{
+        filter: brightness(1.2);
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 2.4rem;
+        left: 2.4rem;
+
+        @include breakpoint($bp-medium) {
+            bottom: 4rem;
+            left: 4rem;
+        }
+
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.8rem;
+        display: block;
+    }
+
+    &__date {
+        color: rgba(#FFF, .75)
+    }
+
+    &--seraph {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-seraph.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-seraph.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-seraph.jpg);
+        }
+    }
+
+    &--eebox {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-eebox.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-eebox.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-eebox.jpg);
+        }
+    }
+
+    &--federal {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-federal.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-federal.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-federal.jpg);
+        }
+    }
+
+    &--del-sol {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-del-sol.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-del-sol.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-del-sol.jpg);
+        }
+    }
+
+    &--prototype {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-prototype.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-prototype.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-prototype.jpg);
+        }
+    }
+
+    &--228b {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-228b.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-228b.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-228b.jpg);
+        }
+    }
+
+    &--edelweiss {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-edelweiss.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-edelweiss.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-edelweiss.jpg);
+        }
+    }
+
+    &--netcry {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-netcry.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-netcry.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-netcry.jpg);
+        }
+    }
+
+    &--hypers {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-hypers.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-hypers.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-hypers.jpg);
+        }
+    }
+
+    &--sxiv {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-sxiv.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-sxiv.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-sxiv.jpg);
+        }
+    }
+
+    &--trinity {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-trinity.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-trinity.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-trinity.jpg);
+        }
+    }
+
+    &--paramour {
+        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/mobile/image-paramour.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/tablet/image-paramour.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(../../../assets/portfolio/desktop/image-paramour.jpg);
+        }
+    }
+}

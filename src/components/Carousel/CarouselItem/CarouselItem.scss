@@ -1,0 +1,93 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+
+.CarouselItem {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 11rem 5.2rem;
+    color: #FFF;
+    width: 100%;
+
+    scroll-snap-align: center;
+
+    @include breakpoint($bp-medium) {
+        padding: 18rem 5.8rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        padding: 18rem 19rem;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint($bp-medium) {
+            max-width: 54.4rem;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 5.7rem;
+        display: block;
+
+        @include breakpoint($bp-medium) {
+            max-width: 44.5rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &--paramour {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/mobile/image-hero-paramour.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/tablet/image-hero-paramour.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/desktop/image-hero-paramour.jpg);
+        }
+    }
+
+    &--seraph {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/mobile/image-hero-seraph.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/tablet/image-hero-seraph.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/desktop/image-hero-seraph.jpg);
+        }
+    }
+
+    &--federal {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/mobile/image-hero-federal.jpg);
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/tablet/image-hero-federal.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/desktop/image-hero-federal.jpg);
+        }
+    }
+
+    &--trinity {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/mobile/image-hero-trinity.jpg);
+
+
+        @include breakpoint($bp-medium) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/tablet/image-hero-trinity.jpg);
+        }
+
+        @include breakpoint($bp-largest) {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../../assets/home/desktop/image-hero-trinity.jpg);
+        }
+    }
+
+
+}

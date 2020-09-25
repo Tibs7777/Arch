@@ -1,0 +1,84 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.Leader-profile {
+
+    color: var(--color-dark);
+
+    &__avatar{
+        width: 100%;
+        min-width: 28rem;
+        transition: all .2s;
+    }
+
+    &__avatar-container {
+        position: relative;
+
+        @include breakpoint($bp-largest) {
+            &:hover > :first-child{
+                filter: brightness(0.5);
+            }
+
+            &:hover > * path {
+                fill: #FFF;
+            }
+         }
+    }
+
+    &__details {
+
+    }
+
+    &__name {
+        display: block;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    &__role {
+        color: rgba(var(--color-dark), .75);
+
+    }
+
+    &__socials {
+        margin-top: .8rem;
+
+        @include breakpoint($bp-largest) {
+            display: none;
+         }
+
+        svg {
+            margin-right: 2.6rem;
+        }
+    }
+
+    &__avatar-socials {
+        display: none;
+         
+        @include breakpoint($bp-largest) {
+            display: flex;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
+        
+        svg {
+            cursor: pointer;
+
+            &:first-child {
+                margin-right: 3rem;
+            }
+
+            path {
+                transition: all .2s;
+
+                @include breakpoint($bp-largest) {
+                    fill: transparent
+                 }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.PortfolioCards {
+    margin: 0 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 31.1rem);
+    gap: 2.4rem;
+    margin-top: 5.6rem;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 13.2rem;
+
+    @include mwbreakpoint(375px) {
+        grid-template-columns: 1fr
+    }
+
+    @include breakpoint($bp-medium) {
+        margin: 0 9.7rem;
+        margin-bottom: 20rem;
+        grid-template-columns: repeat(auto-fit, 57.3rem);
+    }
+
+    @include breakpoint($bp-largest) {
+        margin: 0 16.5rem;
+        margin-bottom: 20rem;
+        grid-template-columns: repeat(auto-fit, 35rem);
+    }
+
+}

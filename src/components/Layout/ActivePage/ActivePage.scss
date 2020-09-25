@@ -1,0 +1,36 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.ActivePage {
+    position: fixed;
+    z-index: 6;
+    align-items: center;
+    transform-origin: top left;
+    transform: rotateZ(90deg);
+    left: calc(2.5rem + 3.9rem);
+
+    display: none;
+
+    @include breakpoint($bp-medium) {
+        display: flex;
+    }
+
+    @include breakpoint($bp-largest) {
+        left: calc(2.5rem + 6.4rem);
+    }
+
+    &::before {
+        content: "";
+        width: 10.4rem;
+        height: 1px;
+        background: var(--color-active-page);
+        display: inline-block;
+        margin-right: 4.8rem;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        color: var(--color-active-page);
+        letter-spacing: 15px;
+    }
+}

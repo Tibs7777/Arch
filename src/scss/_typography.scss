@@ -1,0 +1,47 @@
+@import './mixins';
+@import './variables';
+
+.heading--primary {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -1.2px;
+    font-weight: 700;
+
+    @include breakpoint($bp-medium) {
+        font-size: 8rem;
+        line-height: 8rem;
+        letter-spacing: -2px;
+    }
+}
+
+.heading--large {
+    font-size: 12rem;
+    line-height: 20rem;
+    letter-spacing: -3px;
+    font-weight: 700;
+    color: var(--color-background-medium);
+    display: none;
+
+    @include breakpoint($bp-medium) {
+        display: initial;
+    }
+
+    @include breakpoint($bp-largest) {
+        font-size: 20rem;
+        letter-spacing: -5px;
+    }
+
+}
+
+.heading--secondary {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: -1.43px;
+    font-weight: 700;
+
+    @include breakpoint($bp-medium) {
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        letter-spacing: -2px;
+    }
+}

@@ -1,0 +1,121 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.ConnectForm {
+    margin: 0 3.2rem 13.2rem 3.2rem;
+    margin-bottom: 13.2rem;
+
+    @include breakpoint($bp-medium) {
+        margin: 0 9.7rem 20rem 9.7rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        margin: 0 16.5rem 15rem 16.5rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__form {
+
+        @include breakpoint($bp-largest) {
+            flex: 1;
+        }
+    }
+
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        @include breakpoint($bp-largest) {
+            margin-right: 4rem;
+            width: 35%;
+            max-width: fit-content;
+        }
+    }
+
+    &__input {
+        margin-bottom: 4rem;
+        
+    }
+
+    &__input,
+    &__message {
+        border-bottom: 1px solid #979797;
+        width: 100%;
+        font: inherit;
+        font-size: 1.5rem;
+        color: var(color--dark);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-dark);
+        }
+    }
+
+    &__label {
+        margin-left: 3.5rem;
+        display: block;
+        font-size: 2rem;
+        letter-spacing: -0.31px;
+        font-weight: 700;
+        color: var(--color-active-page);
+
+        &:active {
+            color: var(--color-dark);
+        }
+    }
+
+    &__error {
+        position: absolute;
+        width: fit-content;
+        right: 0;
+        color: var(--color-error);
+        display: none;
+
+        &--ta {
+            bottom: 1.6rem;
+        }
+    }
+
+
+
+    &__group {
+        position: relative;
+
+        &:focus-within {
+            .ConnectForm__label{
+                color: var(--color-dark);
+            }
+        }
+
+        &--error {
+
+            .ConnectForm__label {
+                color: var(--color-error);
+            }
+
+            .ConnectForm__input,
+            .ConnectForm__message {
+                border-color: var(--color-error);
+            }
+
+            .ConnectForm__error {
+                display: initial;
+            }
+
+            &:focus-within {
+                .ConnectForm__label{
+                    color: var(--color-error);
+                }
+            }
+        }
+    }
+
+    .Button {
+        width: 8rem;
+        height: 8rem;
+        margin-left: auto;
+    }
+
+}
+

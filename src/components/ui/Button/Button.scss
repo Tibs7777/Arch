@@ -1,0 +1,63 @@
+.Button {
+    background-color: var(--color-dark);
+    padding: 2.4rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFF;
+    text-decoration: none;
+
+
+
+    & > :first-child {
+        margin-left: 2.4rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: #60636D;
+    }
+
+    &:active {
+        background: var(--color-active-page);
+    }
+
+    svg path {
+        stroke: #FFF;
+    }
+
+    &__s {
+        width: 16.9rem;
+    }
+
+    &__m {
+        width: 18.7rem;
+    }
+
+    &__l {
+        width: 25.2rem;
+    }
+
+    &__full {
+
+    }
+
+    &__empty {
+        padding: 0;
+
+        & > :first-child {
+            margin-left: 0;
+        }
+        
+    }
+
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}

@@ -1,0 +1,101 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.NavigationItems {
+    position: fixed;
+    list-style: none;
+    background: var(--color-background-medium);
+    color: var(--color-dark);
+    right: 0;
+    top: 10.4rem;
+    width: 91.5%;
+    padding: 4.8rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    z-index: 1;
+    transition: transform .3s ease-out;
+
+    @include breakpoint($bp-medium) {
+        position: static;
+        padding: 0;
+        background: none;
+        z-index: initial;
+        display: flex;
+        width: fit-content;
+        color: var(--color-toolbar-desktop);
+    }
+
+    &--open {
+        transform: translateY(0);
+    }
+
+    &--closed {
+        transform: translateY(-100%);
+
+        @include breakpoint($bp-medium) {
+            transform: translateY(0);
+        }
+    }
+
+    & > :not(:last-child) {
+        margin-bottom: 3.2rem;
+
+        @include breakpoint($bp-medium) {
+            margin: 0 5.6rem 0 0;
+    
+        }
+    }
+
+}
+
+.NavigationItem {
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+        color: var(--color-toolbar-desktop);
+
+        @include breakpoint($bp-medium) {
+            color: var(--color-dark);
+        }
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+        color: currentColor;
+    }
+
+    a.active {
+        color: var(--color-dark);
+        text-decoration: none;
+        position: relative;
+   
+        &::after{
+            content: "";
+            width: 100%;
+            background: currentColor;
+            position: absolute;
+            height: 1px;
+            bottom: -.8rem;
+            left: 0;
+        }
+    }
+
+}
+
+.mobile {
+
+   @include breakpoint($bp-medium) {
+       display: none;
+   }
+}
+
+.desktop {
+    display: none;
+
+    @include breakpoint($bp-medium) {
+        display: flex;
+    }
+ }
+

@@ -1,0 +1,37 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.SmallTeam {
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../assets/home/mobile/image-small-team.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 18rem 3.2rem;
+    height: 56rem;
+    margin-bottom: 7.2rem;
+
+
+    @include breakpoint($bp-medium) {
+        padding: 16.8rem 5.8rem 0 5.8rem;
+        margin: 0 9.7rem;
+        margin-bottom: 20rem;
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../assets/home/tablet/image-small-team.jpg);
+    }
+
+    @include breakpoint($bp-largest) {
+        padding: 16.8rem 19rem 0 19rem;
+        margin: 0 16.5rem;
+        margin-bottom: 20rem;
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../assets/home/desktop/image-small-team.jpg);
+    }
+
+    &__heading {
+        color: #FFF;
+        margin-bottom: 3.2rem;
+        max-width: 31.1rem;
+
+        @include breakpoint($bp-medium) {
+            max-width: 44.5rem;
+        }
+    }
+}

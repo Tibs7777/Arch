@@ -1,0 +1,26 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+#map {
+    height: 36.7rem;
+    background: var(--color-dark);
+    margin-bottom: 7.2rem;
+    z-index: 1;
+    
+    @include breakpoint($bp-medium) {
+        height: 56rem;
+        margin: 0 9.7rem 20rem 9.7rem;
+    }
+
+    @include breakpoint($bp-largest) {
+        height: 56rem;
+        margin: 0 16.5rem 16rem 16.5rem;
+    }
+}
+
+.popup {
+    font-family: var(--font-main);
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
